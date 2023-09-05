@@ -13,7 +13,7 @@ function playGame(e) {
 }
 
 function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
+    const choices = ["pedra", "papel", "tesoura"];
     const randomIndex = Math.floor(Math.random() * 3);
     return choices[randomIndex];
 }
@@ -21,9 +21,9 @@ function getComputerChoice() {
 function getWinner(player, computer) {
     if(player === computer) {
         return "Empate!";
-    } else if ((player === "rock" && computer === "scissors") ||
-        (player === "paper" && computer === "rock") ||
-        (player === "scissors" && computer === "paper")) {
+    } else if ((player === "pedra" && computer === "tesoura") ||
+        (player === "papel" && computer === "pedra") ||
+        (player === "tesoura" && computer === "papel")) {
         return "Você venceu!";
     }else {
         return "Computador venceu!";
